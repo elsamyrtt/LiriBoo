@@ -1,10 +1,10 @@
 :root {
     --primary-color: #1f1f1f;
-    --1-color: #A28497;
-    --2-color: #ADA8BE;
-    --3-color: #558C8C;
+    --color-1: #A28497;
+    --color-2: #ADA8BE;
+    --color-3: #558C8C;
     --text-color: #cdcdcd;
-    --hamburger-space: 19.9%; 
+    --hamburger-space: 19.9%;
 }
 body {
     margin: 0;
@@ -15,9 +15,11 @@ body {
  
 @media (max-width: 768px) {
     .navbar{
+        position: fixed;
+        width: 100%;
         display: flex;
         flex-direction: row;
-        background-color: var(--3-color);
+        background-color: var(--color-3);
     }
     .logoimg{
         margin-top: 4px;
@@ -35,18 +37,18 @@ body {
             bottom: -16px;
         }
     }
-    .close {
-        position: absolute;
+    .closeBarOpc {
+        position: fixed;
         right: 32px;
         top: 32px;
         width: 32px;
         height: 32px;
         opacity: 0.3;
       }
-      .close:hover {
+      .closeBarOpc:hover {
         opacity: 1;
       }
-      .close:before, .close:after {
+      .closeBarOpc:before, .closeBarOpc:after {
         position: absolute;
         left: 15px;
         content: ' ';
@@ -54,10 +56,10 @@ body {
         width: 2px;
         background-color: #333;
       }
-      .close:before {
+      .closeBarOpc:before {
         transform: rotate(45deg);
       }
-      .close:after {
+      .closeBarOpc:after {
         transform: rotate(-45deg);
       }
     .barOptions{
@@ -68,15 +70,16 @@ body {
         right: 0%;
         width: 35%;
         height: 100%;
-        background-color: var(--2-color);
+        background-color: var(--color-2);
         transition: ease-in-out;
     }
     .barOption{
 
     }
     .hamburger-menu {
-        margin-left: 84%;
-        margin-top: 10px;
+        position: fixed;
+        right: 3.2px;
+        top: 10px;
     }
 
     .hamburger {
