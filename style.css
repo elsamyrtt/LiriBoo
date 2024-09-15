@@ -1,0 +1,67 @@
+:root {
+    --primary-color: #1f1f1f;
+    --1-color: #A28497;
+    --2-color: #ADA8BE;
+    --3-color: #558C8C;
+    --text-color: #cdcdcd;
+    --hamburger-space: 19.9%; 
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--primary-color);
+    font-family: "Avenir Next", "Avenir", sans-serif;
+}
+ 
+@media (max-width: 768px) {
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        background-color: var(--3-color);
+    }
+    .logoimg{
+        margin-top: 4px;
+        margin-left: 3px;
+        object-fit: contain; 
+    }
+    @keyframes BarOpcAnim {
+        0%{ 
+            bottom: 700px;
+            right: 1000px; 
+            opacity: 0%;
+            transform: rotate(120deg);
+        }
+        100%{
+            bottom: -16px;
+        }
+    }
+    .barOptions{
+        animation: BarOpcAnim 0.5s;
+        position: fixed;
+        bottom: -16px;
+        opacity: 100%;
+        right: 0%;
+        width: 35%;
+        height: 100%;
+        background-color: var(--2-color);
+        transition: ease-in-out;
+    }
+    .barOption{
+
+    }
+    .hamburger-menu {
+        margin-left: 84%;
+        margin-top: 10px;
+    }
+
+    .hamburger {
+        background-color: #cdcdcd;
+        width: 38px;
+        height: 4.8px;
+        border-top-left-radius: var(--hamburger-space);
+        border-bottom-left-radius: var(--hamburger-space);
+        border-top-right-radius: var(--hamburger-space);
+        border-bottom-right-radius: var(--hamburger-space);
+        margin-top: 4.3px;
+    }
+}
