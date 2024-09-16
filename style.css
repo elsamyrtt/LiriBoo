@@ -4,6 +4,7 @@
     --color-2: #ADA8BE;
     --color-3: #558C8C;
     --text-color: #cdcdcd;
+    --text-oscure-color: #181818;
     --hamburger-space: 19.9%;
 }
 @font-face {
@@ -83,10 +84,6 @@ body {
         margin-top: 3px;
         margin-left: 10px;
         text-decoration: none;
-    }
-    #imgMajorI{
-        position: absolute;
-        top: 58px;
     }
     .barOption span{       
         color: var(--text-color);  
