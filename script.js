@@ -1,22 +1,15 @@
-var clickBar = false;
-
 function showBar() {
-    if(clickBar == false){
         bar = document.getElementById("barmenu");
         bar.style.display = "block";
-        clickBar = true;
         exitbt = document.getElementById("CloseOpcID");
         exitbt.style.display = "block";
-    }else{
-        bar = document.getElementById("barmenu");
-        bar.style.display = "none";
-        clickBar = false;
-    }
+        navbar = document.getElementById("navbarID");
+        navbar.style.opacity = "50%";    
 }
-function ExitButton(){
+function ExitButtonBar(){
     exitbt = document.getElementById("CloseOpcID");
     exitbt.style.display = "none";
     bar = document.getElementById("barmenu");
     bar.style.display = "none";
-    clickBar = false;
+    navbar.style.opacity = "100%";
 }
