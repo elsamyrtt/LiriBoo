@@ -84,6 +84,10 @@ body {
         margin-left: 10px;
         text-decoration: none;
     }
+    #imgMajorI{
+        position: absolute;
+        top: 58px;
+    }
     .barOption span{       
         color: var(--text-color);  
         font-family: 'Garet';

@@ -1,3 +1,9 @@
+const img = document.createElement("img");
+const windowWidth = window.innerWidth;
+img.src = 'https://picsum.photos/'+windowWidth+'/350';
+img.alt = "Imagen Principal"
+document.getElementById("imageM").appendChild(img);
+
 function showBar() {
         bar = document.getElementById("barmenu");
         bar.style.display = "block";
