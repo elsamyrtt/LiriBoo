@@ -1,7 +1,3 @@
-const img = document.createElement("img");
-const windowWidth = window.innerWidth;
-img.src = 'https://picsum.photos/'+windowWidth+'/350';
-document.getElementById("imageMajorDiv").appendChild(img);
 function showBar() {
         bar = document.getElementById("barmenu");
         bar.style.display = "block";
@@ -9,7 +5,7 @@ function showBar() {
         exitbt.style.display = "block";
         navbar = document.getElementById("navbarID");
         navbar.style.opacity = "50%";    
-}
+}  
 function ExitButtonBar(){
     exitbt = document.getElementById("CloseOpcID");
     exitbt.style.display = "none";
