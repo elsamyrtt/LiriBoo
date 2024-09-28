@@ -1,11 +1,21 @@
 :root {
-    --background-color: #e2ffbc;
-    --text-color: #cdcdcd;
-    --hamburger-space: 19.9%;
-    --primary-color: hsl(319, 100%, 92%);
-    --contrast-color: #a2ffcc;
-    --secundary-color: #1e5858;
-    --contrast-pink-color: #ff2681;
+    --background-color: #f2e3ff;
+    --text-color: #4a5568;
+    --primary-color: #9bf6ff;
+    --secondary-color: #ffafcc;
+    --accent-color: #ffc6ff;
+    --light-yellow: #fdffb6;
+    --light-green: #caffbf;
+    --light-blue: #a0c4ff;
+    --white: #ffffff;
+    --gray-100: #f7fafc;
+    --gray-200: #edf2f7;
+    --gray-300: #e2e8f0;
+    --gray-400: #cbd5e0;
+    --gray-500: #a0aec0;
+    --gray-600: #718096;
+    --gray-700: #4a5568;
+    --hamburger-space: 20%;
 }
 
 @font-face {
@@ -22,13 +32,13 @@ body {
     user-select: none;
     background-color: var(--background-color);
     margin: 0;
-    padding: 0;
+    padding: 0; 
     font-family: "Avenir Next", "Avenir", sans-serif;
 }
 
 @media (max-width: 768px) {
     .navbar {
-        background-color: var(--primary-color);
+        background-color: var(--gray-300);
         position: fixed;
         width: 100%;
         display: flex;
@@ -51,7 +61,7 @@ body {
             right: 900px;
             opacity: 0%;
             transform: rotate(120deg);
-        }
+        } 
     }
 
     .closeBarOpc {
@@ -69,13 +79,37 @@ body {
 
     .closeBarOpc:before,
     .closeBarOpc:after {
-        background-color: var(--contrast-color);
+        background-color: var(--gray-700);
         position: absolute;
         border-radius: 10%;
         left: 15px;
         content: ' ';
         height: 33px;
         width: 4px;
+    }
+
+    .search {
+        display: flex;
+        max-height: 30px;
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 67%;
+        border-radius: 5px; 
+        background-color: var(--gray-200);
+    }
+    .searchInput{
+        border-radius: 100px;
+        max-height: 25px;
+        width: 100%;
+        max-width: 85%; 
+        margin-top: 1.5px; 
+        margin-left: 1px;
+        border: none;
+    }
+
+    #searchFa{
+        margin-left: 8px;
+        margin-top: 6px;
     }
 
     .closeBarOpc:before {
@@ -90,16 +124,16 @@ body {
         animation: BarOpcAnim 0.2s;
         position: fixed;
         opacity: 100%;
-        border: 1px solid var(--text-color);
-        background-color: var(--secundary-color);
+        backdrop-filter: blur(15px);
+        background-image: linear-gradient( 109.6deg,  rgba(112,246,255,0.33) 11.2%, rgba(221,108,241,0.26) 42%, rgba(229,106,253,0.71) 71.5%, rgba(123,183,253,1) 100.2% );
+        border: 1px solid var(--gray-100);
         right: 0%;
-        border-radius: 3%;
+        border-radius: 10px;
         margin-top: 1%;
         margin-bottom: 1%;
         width: 55%;
         z-index: 100;
         height: 98%;
-        transition: ease-in-out;
     }
 
     .barOption {
@@ -122,44 +156,73 @@ body {
         position: absolute;
         backdrop-filter: blur(10px);
         background-color: rgba(255, 255, 255, 0.3);
-        border: 1px solid #fff;
         border-radius: 15px;
         top: 30%;
         right: 4px;
         transform: translate(0, -50%);
         z-index: 1;
         width: calc(100vw - 20px);
-        max-width: 25vw;
+        max-width: 20vw;
         height: auto;
-        max-height: 80px; 
+        max-height: 80px;
         padding: 10px;
         text-align: center;
     }
-    
+
     .priceMD {
         font-size: 14px;
         margin: 0 auto;
     }
-    
+
     .Buy-Cart {
         display: flex;
         flex-direction: column;
         gap: 5px;
         margin: 8px auto;
     }
-    
-    #Buy, #AddCart {
-        padding: 8px 15px;
+
+    #Buy,
+    #AddCart {
+        padding: 8px 1px;
         border: none;
         border-radius: 10px;
         cursor: pointer;
         font-size: 12px;
-    }   
+    }
+
+    #Buy:hover,
+    #AddCart:hover {
+        transform: scale(1.05);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .RectangleBMD:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        transform: translate(0, -52%);
+    }
 
     .barOption span {
-        color: var(--text-color);
+        color: var(--gray-100);
         font-family: 'Garet';
+        background-color: var(--gray-700);
+        font-weight: bolder;
+        width: 130px;
+        border-radius: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-top: 10px;
         font-size: 26px;
+    }
+
+    @keyframes barOptionH {
+        0% {
+            transform: translate(-2px);
+        }
+    }
+
+    .barOption:hover {
+        animation: barOptionH 1s;
     }
 
     .hamburger-menu {
@@ -176,6 +239,6 @@ body {
         border-top-right-radius: var(--hamburger-space);
         border-bottom-right-radius: var(--hamburger-space);
         margin-top: 4.3px;
-        background-color: var(--contrast-pink-color);
+        background-color: var(--gray-600);
     }
 }
