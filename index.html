@@ -7,7 +7,7 @@
     <title>Fashion babys</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-</head> 
+</head>
 
 <body>
     <header>
@@ -15,25 +15,26 @@
             <a class="logo" href="index.html">
                 <img src="https://picsum.photos/500/500" alt="" class="logoimg">
             </a>
-            <div class="search"> 
-                    <input class="searchInput" type="text"> 
-                    <i id="searchFa" class="fas fa-search" onclick="alert('Buscando')"></i>                
+            <div class="search">
+                <input class="searchInput" type="text">
+                <i id="searchFa" class="fas fa-search" onclick="alert('Buscando')"></i>
             </div>
             <div class="hamburger-menu" onclick="showBar()">
                 <div class="hamburger"></div>
                 <div class="hamburger"></div>
                 <div class="hamburger"></div>
             </div>
-        </nav>   
+        </nav>
         <div class="barOptions" id="barmenu" style="display: none; position: fixed;">
-            <a href="index.html" class="barOption"><span>Inicio</span></a> 
+            <a href="index.html" class="barOption"><span>Inicio</span></a>
             <a href="index.html" class="barOption"><span>Tienda</span></a>
             <a href="index.html" class="barOption"><span>Contacto</span></a>
             <a href="#" id="CloseOpcID" class="closeBarOpc" style="display: none;" onclick="ExitButtonBar()"></a>
         </div>
-    </header>   
+    </header>
     <main>
-        <div id="imageMajorDiv">
+
+        <section id="imageMajorDiv">
             <img src="https://picsum.photos/900/1000" alt="" class="imgM">
             <div class="RectangleBMD">
                 <h4 class="priceMD">100.000$</h4>
@@ -42,7 +43,18 @@
                     <div id="AddCart"><span>Añadir</span></div>
                 </div>
             </div>
-        </div>
+        </section>
+        <section id="TreandingClothID">
+            <div class="container-scrolling">
+                <div class="arrowTCL"><i class="fa-solid fa-angle-left"></i></div>
+                <div class="arrowTCR"><i class="fa-solid fa-angle-right"></i></div>
+            </div>
+            <div class="treandingCloth">
+                <h2>Nombre de ropa</h2>
+                <img src="https://picsum.photos/720/920" alt="" class="ImgTC">
+                <span class="CostTC">199.988</span>
+            </div>
+        </section>
     </main>
     <script src="script.js"></script>
 </body>

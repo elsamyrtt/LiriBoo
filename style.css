@@ -1,6 +1,7 @@
 :root {
     --background-color: #f2e3ff;
     --text-color: #4a5568;
+    --card-color: #7b95aa;
     --primary-color: #9bf6ff;
     --secondary-color: #ffafcc;
     --accent-color: #ffc6ff;
@@ -32,12 +33,230 @@ body {
     user-select: none;
     background-color: var(--background-color);
     margin: 0;
-    padding: 0; 
+    padding: 0;
     font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+.navbar {
+    z-index: 10;
+    background-color: var(--gray-300);
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.logoimg {
+    border-radius: 10%;
+    margin-top: 3.3px;
+    margin-left: 3.3px;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+@keyframes BarOpcAnim {
+    0% {
+        bottom: 1000px;
+        right: 900px;
+        opacity: 0%;
+        transform: rotate(120deg);
+    }
+}
+
+.closeBarOpc {
+    position: fixed;
+    right: 6.2px;
+    top: 6.2px;
+    width: 32px;
+    height: 32px;
+    opacity: 100%;
+}
+
+
+.closeBarOpc:before,
+.closeBarOpc:after {
+    background-color: var(--gray-700);
+    position: absolute;
+    border-radius: 10%;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 4px;
+}
+
+.search {
+    display: flex;
+    max-height: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--gray-200);
+}
+
+.searchInput {
+    border-radius: 100px;
+    max-height: 25px;
+    width: 100%;
+    margin-top: 1.5px;
+    border: none;
+}
+
+#searchFa {
+    margin-right: 3px;
+    margin-top: 6px;
+}
+
+.closeBarOpc:before {
+    transform: rotate(45deg);
+}
+
+.closeBarOpc:after {
+    transform: rotate(-45deg);
+}
+
+.barOptions {
+    animation: BarOpcAnim 0.2s;
+    position: fixed;
+    backdrop-filter: blur(15px);
+    background-color: #caffbf71;
+    border: 1px solid var(--gray-100);
+    right: 0%;
+    border-radius: 10px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 55%;
+    z-index: 100;
+    height: 98%;
+}
+
+.barOption {
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.imgM {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.RectangleBMD {
+    position: absolute;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    top: 27%;
+    right: 4px;
+    transform: translate(0, -50%);
+    z-index: 1;
+    width: calc(100vw - 20px);
+    max-width: 20vw;
+    height: auto;
+    max-height: 80px;
+    padding: 10px;
+    text-align: center;
+}
+
+.priceMD {
+    margin-left: 0px;
+    margin-right: 1px;
+    font-size: 80%;
+    margin: 0px 0px;
+}
+
+.Buy-Cart {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 8px auto;
+}
+
+#Buy,
+#AddCart {
+    padding: 8px 1px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+#Buy:hover,
+#AddCart:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.RectangleBMD:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transform: translate(0, -52%);
+}
+
+.barOption span {
+    color: var(--gray-100);
+    font-family: 'Garet';
+    background-color: var(--gray-700);
+    font-weight: bolder;
+    width: 130px;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    font-size: 26px;
+}
+
+@keyframes barOptionH {
+    0% {
+        transform: translate(-2px);
+    }
+}
+
+.barOption:hover {
+    animation: barOptionH 1s;
+}
+
+.hamburger-menu {
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.hamburger {
+    width: 38px;
+    height: 4.8px;
+    border-top-left-radius: var(--hamburger-space);
+    border-bottom-left-radius: var(--hamburger-space);
+    border-top-right-radius: var(--hamburger-space);
+    border-bottom-right-radius: var(--hamburger-space);
+    margin-top: 4.3px;
+    background-color: var(--gray-600);
+}
+
+.treandingCloth {
+    background-color: var(--card-color);
+    margin-left: 13%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ImgTC {
+    width: 100%;
+}
+
+.CostTC {
+    padding-left: 15%;
 }
 
 @media (max-width: 768px) {
     .navbar {
+        z-index: 10;
         background-color: var(--gray-300);
         position: fixed;
         width: 100%;
@@ -50,8 +269,8 @@ body {
         margin-top: 3.3px;
         margin-left: 3.3px;
         display: inline-block;
-        max-width: 100%;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         object-fit: cover;
     }
 
@@ -61,7 +280,7 @@ body {
             right: 900px;
             opacity: 0%;
             transform: rotate(120deg);
-        } 
+        }
     }
 
     .closeBarOpc {
@@ -73,9 +292,6 @@ body {
         opacity: 100%;
     }
 
-    .closeBarOpc:hover {
-        opacity: 1;
-    }
 
     .closeBarOpc:before,
     .closeBarOpc:after {
@@ -91,24 +307,23 @@ body {
     .search {
         display: flex;
         max-height: 30px;
-        margin-top: 10px;
+        margin-top: 15px;
         margin-left: 10px;
-        width: 67%;
-        border-radius: 5px; 
+        width: 100%;
+        border-radius: 5px;
         background-color: var(--gray-200);
     }
-    .searchInput{
+
+    .searchInput {
         border-radius: 100px;
         max-height: 25px;
         width: 100%;
-        max-width: 85%; 
-        margin-top: 1.5px; 
-        margin-left: 1px;
+        margin-top: 1.5px;
         border: none;
     }
 
-    #searchFa{
-        margin-left: 8px;
+    #searchFa {
+        margin-right: 3px;
         margin-top: 6px;
     }
 
@@ -123,9 +338,7 @@ body {
     .barOptions {
         animation: BarOpcAnim 0.2s;
         position: fixed;
-        opacity: 100%;
-        backdrop-filter: blur(15px);
-        background-image: linear-gradient( 109.6deg,  rgba(112,246,255,0.33) 11.2%, rgba(221,108,241,0.26) 42%, rgba(229,106,253,0.71) 71.5%, rgba(123,183,253,1) 100.2% );
+        backdrop-filter: blur(10px);
         border: 1px solid var(--gray-100);
         right: 0%;
         border-radius: 10px;
@@ -157,7 +370,7 @@ body {
         backdrop-filter: blur(10px);
         background-color: rgba(255, 255, 255, 0.3);
         border-radius: 15px;
-        top: 30%;
+        top: 27%;
         right: 4px;
         transform: translate(0, -50%);
         z-index: 1;
@@ -170,8 +383,10 @@ body {
     }
 
     .priceMD {
-        font-size: 14px;
-        margin: 0 auto;
+        margin-left: 0px;
+        margin-right: 1px;
+        font-size: 80%;
+        margin: 0px 0px;
     }
 
     .Buy-Cart {
@@ -226,9 +441,8 @@ body {
     }
 
     .hamburger-menu {
-        position: fixed;
-        right: 3.2px;
-        top: 10px;
+        margin-left: 5px;
+        margin-top: 14.1px;
     }
 
     .hamburger {
@@ -240,5 +454,68 @@ body {
         border-bottom-right-radius: var(--hamburger-space);
         margin-top: 4.3px;
         background-color: var(--gray-600);
+    }
+
+    @keyframes TCAnim {
+        0% {
+            border-radius: 0rem;
+        }
+
+        100% {
+            border-radius: 1rem;
+        }
+    }
+
+    .treandingCloth {
+        transition: 1s;
+        border-radius: 0.5rem;
+        animation: TCAnim 0.3s;
+        animation-direction: reverse;
+        background-color: var(--card-color);
+        width: 70%;
+        margin-left: 16%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .treandingCloth:hover {
+        animation: TCAnim 0.3s;
+        animation-direction: normal;
+        border-radius: 1rem;
+    }
+
+    .container-scrolling {
+        position: relative;
+        top: 245px;
+        display: flex;
+        gap: 90%;
+        margin-left: 5%;
+    }
+    
+    .ImgTC {
+        padding: 1rem;
+        position: relative;
+        background: linear-gradient(to right, rgb(255, 194, 194), rgb(0, 66, 128));
+        padding: 3px;
+        width: 90%;
+        height: 17rem;
+        border-radius: 0.5rem;
+        margin-left: 3.5%;
+        margin-top: 8.5px;
+    }
+
+    .treandingCloth h2 {
+        font-family: 'Garet';
+        text-align: center;
+        font-weight: bolder;
+    }
+
+    .CostTC {
+        font-family: 'Garet';
+        font-weight: bolder;
+        display: inline-block;
+        padding-left: 35%;
+        margin-top: 5px;
     }
 }
